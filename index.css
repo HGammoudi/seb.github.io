@@ -1,0 +1,159 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to top, #0c3516, #062204); /* Light gray background */
+    color: #d1d1d1; /* Dark text for readability */
+}
+
+/* Header Styling */
+h2 {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 24px;
+    color: #f5f5ff; /* Matching sidebar color */
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: linear-gradient(to right,  #0c3516, #062204); /* Dark theme sidebar */
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding-top: 20px;
+    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.384);
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin: 10px 0;
+}
+
+.link {
+    display: inline-flex;
+    align-items: center;
+    font-size: 16px; /* Adjust as needed */
+    color: white; /* Match theme */
+    text-decoration: none;
+}
+
+.link i {
+    font-size: 14px; /* Adjust icon size */
+    margin-left: 5px; /* Space between text & icon */
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    padding: 15px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.sidebar a:hover {
+    background-color: #1d4618; /* Soft blue hover effect */
+    padding-left: 25px;
+}
+
+.cover {
+    width: 200px;
+    height: 100px;
+    margin-left: 20px;
+}
+
+/* Main Content */
+.content {
+    margin-left: 260px; /* Adjusted for sidebar */
+    padding: 20px;
+    width: calc(100% - 260px);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+iframe {
+    width: 90%;
+    height: 90%;
+    border: none;
+    background: linear-gradient(to top,  #0c3516, #062204);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    flex-grow: 1; /* Takes up remaining space */
+    border: none; /* Removes default border */
+    height: 100vh;
+    
+}
+
+.collapsible-content {
+    max-height: 0; /* Collapsed by default */
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    padding-left: 20px;
+}
+
+/* Submenu Links */
+.collapsible-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding-left: 400px; /* Indentation (Out of*/
+}
+
+.collapsible-content a:hover {
+    background-color: #3a5e43;
+    transition: all 0.3s ease;
+}
+
+/* Collapsible Button */
+.collapsible-btn {
+    cursor: pointer;
+    display: block;
+    color: white;
+    padding: 15px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+/* Active State for Collapsible Menu */
+.collapsible.active .collapsible-content {
+    max-height: 200px; /* Adjust this value based on submenu size */
+    padding-bottom: 10px;
+}
+
+.hr {
+    
+    border: solid 1px #0b3d07;
+    margin-top: 15px;
+    width: 85%;
+}
+
+
+#arrow {
+    margin-left: 7px;
+}
+
+#box {
+    margin-right: 2px;
+    font-size: 14px;
+    text-shadow: #072406;
+}

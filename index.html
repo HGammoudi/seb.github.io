@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K9 Panel</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="homeicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="vibe">
+    <div class="sidebar">
+        <img class="cover" src="panelcover.png" alt="panelcover"> <br><br>
+        <ul>
+            <li><a href="home.html" target="frame"><i class="fa-solid fa-house" id="box"></i> Home</a></li>
+            <!-- Collapsible Menu -->
+            <li class="collapsible">
+                <a href="javascript:void(0);" class="collapsible-btn"><i class="fa-solid fa-box-archive" id="box"></i> Paperwork Generators ▾</a>
+                <ul class="collapsible-content">
+                    <li><a href="https://panel.booskit.dev/paperwork-generators/lssd/seb-log" target="frame"><i class="fa-solid fa-file-lines" id="box"></i> Incident Log</i> </a></li> </a></li> 
+                    <li><a href="dvsk9.html" target="frame"><i class="fa-solid fa-file-lines" id="box"></i> Davis Deployment Log</a></li>
+                    <li><a href="sebk9.html" target="frame"><i class="fa-solid fa-file-lines" id="box"></i> C.S.D. Deployment Log</a></li>
+                </ul>
+            </li>
+            <li><a href="https://cfmb.booskit.dev" target="frame"><i class="fa-solid fa-car" id="box"></i> Fleet</a></li>
+            <li><a href="https://docs.google.com/spreadsheets/d/1fkG-JPK4SjRTDtzQeEbxAtwFhM_yQgE00V7vI1UCd7c/edit?pli=1&gid=159734363#gid=159734363" target="frame"><i class="fa-solid fa-address-book" id="box"></i> Roster</a></li>
+            <hr class="hr">
+            <li><a href="https://lssd.gta.world/viewtopic.php?p=118605#p118605"><i class="fa-solid fa-circle-info"></i> SWT Manual<i class="fa-solid fa-arrow-up-right-from-square" id="arrow"></i> </a></li>
+            <li><a href="https://lssd.gta.world/viewtopic.php?p=118682#p118682"><i class="fa-solid fa-circle-info"></i> Reference Manual<i class="fa-solid fa-arrow-up-right-from-square" id="arrow"></i> </a></li>
+            <li><a href="https://lssd.gta.world/viewforum.php?f=1813"><i class="fa-solid fa-circle-info"></i> Notice Board<i class="fa-solid fa-arrow-up-right-from-square" id="arrow"></i> </a></li>
+            <li><a href="https://lssd.gta.world/viewforum.php?f=737"><i class="fa-solid fa-person-rifle"></i> Specialized Board<i class="fa-solid fa-arrow-up-right-from-square" id="arrow"></i> </a></li>
+            <li><a href="https://lssd.gta.world/viewtopic.php?p=219521#p219521"><i class="fa-solid fa-plane-up"></i> Flight Operations<i class="fa-solid fa-arrow-up-right-from-square" id="arrow"></i> </a></li>
+            <li><a href="https://lssd.gta.world/viewtopic.php?p=216397#p216397"><i class="fa-solid fa-user"></i> Probationary Guide<i class="fa-solid fa-arrow-up-right-from-square" id="arrow"></i> </a></li>
+            <li><a href="https://lssd.gta.world/viewtopic.php?p=192225#p192225"><i class="fa-solid fa-phone" id="box"></i> Phone Roster<i class="fa-solid fa-arrow-up-right-from-square" id="arrow"></i></a></li>
+            <li><a href="https://lssd.gta.world/viewtopic.php?p=218671#p218671"><i class="fa-solid fa-book-medical" id="box"></i> TEMS Contact Roster<i class="fa-solid fa-arrow-up-right-from-square" id="arrow"></i></a></li>
+        </ul>
+    </div>   
+    <div class="content"><iframe name="frame" id="iframeContent" src="home.html" frameborder="0"></iframe></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const collapsible = document.querySelector(".collapsible");
+    const collapsibleBtn = collapsible.querySelector(".collapsible-btn");
+    const collapsibleContent = collapsible.querySelector(".collapsible-content");
+
+    collapsibleBtn.addEventListener("click", function () {
+        if (collapsibleContent.style.maxHeight) {
+            // Menu is open — collapse it
+            collapsibleContent.style.maxHeight = null;
+        } else {
+            // Menu is closed — expand it
+            collapsibleContent.style.maxHeight = collapsibleContent.scrollHeight + "px";
+        }
+    });
+});
+
+    function updateBreadcrumb(pageTitle) {
+        document.querySelector('.breadcrumb').innerHTML = `Home > <span>${pageTitle}</span>`;
+    }
+
+    function loadPage(page, title) {
+        document.getElementById('iframeContent').src = page;
+        updateBreadcrumb(title);
+    }
+    </script>
+</body>
+</html>
